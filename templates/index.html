@@ -12,31 +12,32 @@
             <h1>Confeitaria Delícia</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Cardápio</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#menu">Cardápio</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
             <h2>Os melhores bolos da cidade!</h2>
             <p>Delícias feitas com amor e ingredientes frescos.</p>
-            <a href="#" class="cta-button">Saiba Mais</a>
+            <a href="#about" class="cta-button">Saiba Mais</a>
         </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
             <h2>Sobre Nós</h2>
             <p>Somos uma confeitaria dedicada a criar bolos deliciosos e personalizados para todas as ocasiões. Nossa paixão pela confeitaria é refletida em cada criação que sai da nossa cozinha.</p>
         </div>
     </section>
 
-    <section class="menu">
+    <section id="menu" class="menu">
         <div class="container">
             <h2>Nosso Cardápio</h2>
             <div class="menu-items">
@@ -56,10 +57,28 @@
         </div>
     </section>
 
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para mais informações ou para fazer um pedido.</p>
+            <form action="submit_form.php" method="post">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Confeitaria Delícia. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-</body>
-</html>
+            <p>&copy; 2024 Con
