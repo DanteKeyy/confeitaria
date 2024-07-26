@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Confeitaria Delícia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
-<h1>Contato</h1>
+    <header>
+        <div class="container">
+            <h1>Confeitaria Delícia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#/index">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#menu">Cardápio</a></li>
+                    <li><a href="{{ url_for('contato') }}">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <section class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Se você tiver dúvidas ou quiser fazer um pedido, preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+            <form action="/enviar_mensagem" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Confeitaria Delícia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
